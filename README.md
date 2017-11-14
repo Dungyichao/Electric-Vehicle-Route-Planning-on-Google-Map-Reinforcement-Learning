@@ -1,2 +1,2 @@
-# Electrical-Vehicle-Route-Planning
-Please read the README.pdf experiment section 
+# Electrical Vehicle Route Planning on Google Map with Reinforcement Learning
+More datail please find the README.pdf experiment section 
