@@ -19,7 +19,7 @@ More datail please find the README.pdf experiment section
 (4) enter how many episode you want to train<br />
 
 # How does this work
-##(1) Learning Environment
+##(1) Learning Environment##
 Make the map like a grid map for the learning agent to navigate on (figure(a)). Strictly speaking, each grid in the grid map is not a rectangle. This phenomenon is caused by the sphere geometry and our restriction on the length of the stride which is demonstrated in figure (b)<br />
 ![gridmap](https://user-images.githubusercontent.com/25232370/33046405-c89e8556-ce1e-11e7-8f9a-ff50a931ccb5.JPG)
 (2)
