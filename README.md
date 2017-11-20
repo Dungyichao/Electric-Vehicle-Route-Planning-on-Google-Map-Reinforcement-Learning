@@ -1,5 +1,5 @@
 # Electrical Vehicle Route Planning on Google Map with Reinforcement Learning
-More datail please find the README.pdf experiment section
+More datail please find the Reinforcement Learning on Route Planning through Google map for Self-driving System.pdf experiment section
 
 # Library Requirements with Python 3.6.2:
 (1) Tensorflow (CPU)
@@ -33,7 +33,10 @@ The following graph shows how to compute the energy for a vehicle to travel uphi
 But noticed that we only compute the elevation between the two position shown in the following graph. To increase the accuracy, you should minimize the distance between these two position (this will increase the computation time).<br />
 ![car1](https://user-images.githubusercontent.com/25232370/33046721-338fe5b6-ce20-11e7-8c17-3663462ac24f.JPG)<br />
 
-(4)
+(4) Battery<br />
+In the experiment, the battery performance will not affect the training process. The battery is able to carry totally 50000Wh of energy which is a standard offering by electrical vehicle manufacture, Tesla. In electrochemistry, it is recommended to use the the state of charge (SOC) from 90% ~ 20% of a battery to improve it's life which we implement in our case. The SOC is calculated by the ratio between the current energy and the total energy. We will not take the battery degradation into the experiment. Further work can take the real factor on battery performance into account as part of the training process. For this experiment, we only demonstrate how much energy consumed and how many times the battery need to be charged in an ideal condition. <br />
+
+(5) Reward arrangement <br />
 
 
 # Result
