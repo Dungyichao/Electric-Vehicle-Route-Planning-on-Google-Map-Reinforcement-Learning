@@ -19,4 +19,4 @@ More datail please find the README.pdf experiment section
 (4) enter how many episode you want to train
 
 # Result
-
+![result](https://user-images.githubusercontent.com/25232370/33046240-25c5ac2e-ce1e-11e7-9156-faf109c42bbe.JPG)
