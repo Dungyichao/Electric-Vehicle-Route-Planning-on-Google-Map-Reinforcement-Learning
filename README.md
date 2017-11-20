@@ -21,13 +21,16 @@ More datail please find the README.pdf experiment section
 # How does this work
 (1) Learning Environment<br />
 Make the map like a grid map for the learning agent to navigate on (figure(a)). Strictly speaking, each grid in the grid map is not a rectangle. This phenomenon is caused by the sphere geometry and our restriction on the length of the stride which is demonstrated in figure (b)<br />
-![gridmap](https://user-images.githubusercontent.com/25232370/33046405-c89e8556-ce1e-11e7-8f9a-ff50a931ccb5.JPG)
-(2) Energy Computation<br />
+![gridmap](https://user-images.githubusercontent.com/25232370/33046405-c89e8556-ce1e-11e7-8f9a-ff50a931ccb5.JPG)<br />
+(2) Interact with Google map API /><br />
+
+
+(3) Energy Computation<br /><br />
 The following graph shows how to compute the energy for a vehicle to travel uphill (can also be applied on a flat road)<br />
-![car2](https://user-images.githubusercontent.com/25232370/33046700-1b515886-ce20-11e7-9b57-d9e735ca0167.JPG)
+![car2](https://user-images.githubusercontent.com/25232370/33046700-1b515886-ce20-11e7-9b57-d9e735ca0167.JPG)<br />
 But noticed that we only compute the elevation between the two position shown in the following graph<br />
-![car1](https://user-images.githubusercontent.com/25232370/33046721-338fe5b6-ce20-11e7-8c17-3663462ac24f.JPG)
-(3) Energy Computation<br />
+![car1](https://user-images.githubusercontent.com/25232370/33046721-338fe5b6-ce20-11e7-8c17-3663462ac24f.JPG)<br />
+
 
 # Result
 ![result](https://user-images.githubusercontent.com/25232370/33046240-25c5ac2e-ce1e-11e7-9156-faf109c42bbe.JPG)
