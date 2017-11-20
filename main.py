@@ -27,7 +27,8 @@ def update_net(trainable_var, sess):
     container = []
     for id,var in enumerate(trainable_var[0:int(num/2)]):
         container.append(trainable_var[id+int(num/2)].assign(var))
-    sess.run(container)
+    for contain in container:
+        sess.run(contain)
     
 print("------------for tensorflow --------------")
 tf.reset_default_graph()
@@ -42,7 +43,7 @@ print("------------for env & google info--------------")
 env = environment('40.468254,-86.980963', '40.445283,-86.948429')
 step_rewardG, chargenumG, SOCG, timeG = env.origine_map_reward()  # The info of google map route
 env.battery_charge()
-step_length = 1000  # meter
+step_length = 750  # meter
 env.length = 1000 / step_length
 print("stride length: ", env.length)
 learning_rate = 0.0001
@@ -87,21 +88,21 @@ print("trainable_var", len(trainable_var))
 print("------------Parameter --------------")
 path = "./ev/model"
 pre_train = pre_train_step  # don't update and train the model within these steps
-train_num = 10000   # total episode num
+train_num = 300   # total episode num
 max_step = max_train_step
 updata_f = 5   # frequency of copy weights from Qnet to Targetnet
 batch_num = 32
 gamma = 0.9 # discount factor
 high_prob = 1
 low_prob = 0.1
-slope = (high_prob - low_prob) / 2000
+slope = (high_prob - low_prob) / 20000
 ############### Load Model
-pathload = "./ev/Result/23_proceed/result6"
-load_model = False
-modelnum = 24
+pathload = "./ev/Result/39_proceed38/model"
+load_model = True
+modelnum = 83
 sleep = False
 if load_model == True:
-    high_prob = 0.5
+    high_prob = 0.77
 ############### initialize constant
 tt = 0
 
@@ -126,6 +127,8 @@ with tf.Session() as sess:
         print("Model restored.")
 
     for episode in range(train_num):  # num of episode
+        #all_weight = sess.run(tf.trainable_variables())
+        #print(all_weight)
         s = env.start_position
         s_list = list(s)
         env.battery_charge()
@@ -146,6 +149,10 @@ with tf.Session() as sess:
         unreach_step_history = []
         loss_history = []
         overQ_num_roll = 0
+        #print("----------------")
+        #inputt = sess.run(Qnet.inputt, feed_dict={Qnet.input:[s_list]})[0]
+        #print("inputt: ",inputt)
+        #print("----------------")
         while (in_ep_step <= max_step):   # Max step in one episode
             #step_buffer.append(s_list)
             test = 0 # try
@@ -158,10 +165,12 @@ with tf.Session() as sess:
                 action = np.random.randint(0,4)
                 test = 1 # try
             else:
+                #inputt = sess.run(Qnet.inputt, feed_dict={Qnet.input:[s_list]})[0]
                 action = sess.run(Qnet.predict, feed_dict={Qnet.input:[s_list]})[0]
                 #action = float(actionn)
                 Q_value = sess.run(Qnet.action, feed_dict={Qnet.input:[s_list]}) # for data analysis
                 test = 2 # try
+                #print("inputt: ",inputt)
             #print(action)
 	    # how to choose action 
             if test == 1:
@@ -189,6 +198,10 @@ with tf.Session() as sess:
                 if e > low_prob:
                     e -= slope                     
                 ex_batch = replay_buffer.batch(batch_num)
+                #Qnet_action_Qvalue = sess.run(Qnet.action, feed_dict={Qnet.input:np.vstack(ex_batch[:,3])})
+                #print("$$$$$$$$$$$$$$$$")
+                #print(Qnet_action_Qvalue)
+                #print("$$$$$$$$$$$$$$$$")
                 Qnet_pre = sess.run(Qnet.predict, feed_dict={Qnet.input:np.vstack(ex_batch[:,3])})
                 #print(Qnet_pre)
                 Targetnet_action = sess.run(Targetnet.action, feed_dict={Targetnet.input:np.vstack(ex_batch[:,3])})
@@ -312,8 +325,9 @@ with tf.Session() as sess:
         #total_step = total_step + 1
         reward_history.append(episode_reward)
         env.battery_charge()
-        if total_step > 500 and total_step % 140 == 0 or sleep == True:
+        #if total_step > 500 and total_step % 140 == 0 or sleep == True:
         #if total_step > 500 and (episode + 1) % 1 == 0 or sleep == True:
+        if (total_step > 450 and total_step % 120 == 0) or sleep == True:
             print("Sleeping now for 20 min")
             tm.sleep(1230)
             #print("Sleeping now for 10 min")
