@@ -41,6 +41,12 @@ In the experiment, the battery performance will not affect the training process.
 
 ## (6) Reward arrangement <br />
 The fundamental concept of defining the reward is based on the energy consumption in one stride from the current position to the next position, for example, from A to B shown in the figure 6. The energy is calculated by the method provided previous section. We then divide the energy by 10000 and times -1. In order to minimize the number of total steps during training, we add -0.1 to each transition if the next position is reachable. In other words, the reward r for taking any reachable step will be r = -0.1 - (energy consumption / 10000). If the next position is unreachable such as a lake or a river, r = -1 and the agent stay at the same current position and take the other action. If the distance of the next position and the destination position is less than the length of the predefined displacement (1000m in the figure 6), the reward r for taking this action will become r = +1 - (energy consumption from the current position to the next position / 10000) - (energy consumption from the next position to the destination position / 10000). Noticed here +1 appears in the reward because of the success of this action which lead the agent to the destination.<br />  
+**Black:** Unreachable or out of boundary<br />  
+**Red::** Start position<br />  
+**Blue:** Destination position<br />  
+**Grean:** Reachable position to reachable position where is not within the range of one stride of the destination<br />  
+**White:** Reachable position to the position where is in the one stride length of range from the destination<br />   
+
 ![reward](https://user-images.githubusercontent.com/25232370/33048325-45acaca4-ce28-11e7-902b-9b74d8192a59.png)<br />
 
 
