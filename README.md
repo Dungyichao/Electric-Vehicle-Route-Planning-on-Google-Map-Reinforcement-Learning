@@ -34,6 +34,8 @@ Download all the python file as following: **```main.py```**, **```Environment.p
 
 ## How does this work
 ### (1) Algorithm: Double-DQN<br />
+We initialize two identical network, the first one is the Q-network which the agent determines the action at the current state. The second one is the Target-network which acts as a target for Q-network to achieve. We only do backpropagation and update the weights through AdamOptimizer with learning rate 0.0001 in the Q-network for every steps and then copy the weights in Q-network to Target-network for every five steps.
+
 Our learning agent is an electric vehicle and navigating on the Google map environment by choosing different action (north, east, south, west). The action can be determined by the Double-DQN or by random. During the learning process, the agent will first navigate on the map randomly to explore the map, but we will gradually reduce the portion of choosing action randomly but adopt the action with highest q value provided by the Double-DQN model. γ is 0.9 and N<sub>b</sub> is 32.
 <p align="center">
   <img src="/image/al.JPG" height="40%" width="40%">
