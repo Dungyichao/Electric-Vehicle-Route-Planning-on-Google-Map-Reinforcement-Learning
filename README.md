@@ -46,9 +46,9 @@ assume that the agent is at current position denoted by A and heading south to t
 
 ### (4) Energy Computation<br /><br />
 The following graph shows how to compute the energy for a vehicle to travel uphill (can also be applied on a flat road)<br />
-<img src="/image/car2.JPG" height="60%" width="60%"><br /><br />
+<div style="text-align:center"><img src="/image/car2.JPG" height="60%" width="60%"><br /><br />
 But noticed that we only compute the elevation between the two position shown in the following graph. To increase the accuracy, you should minimize the distance between these two position (this will increase the computation time).<br />
-<img src="/image/car1.JPG" height="60%" width="60%"><br />
+<div style="text-align:center"><img src="/image/car1.JPG" height="60%" width="60%"><br />
 
 ### (5) Battery<br />
 In the experiment, the battery performance will not affect the training process. The battery is able to carry totally 50000Wh of energy which is a standard offering by electrical vehicle manufacture, Tesla. In electrochemistry, it is recommended to use the the state of charge (SOC) from 90% ~ 20% of a battery to improve it's life which we implement in our case. The SOC is calculated by the ratio between the current energy and the total energy. We will not take the battery degradation into the experiment. Further work can take the real factor on battery performance into account as part of the training process. For this experiment, we only demonstrate how much energy consumed and how many times the battery need to be charged in an ideal condition. <br />
