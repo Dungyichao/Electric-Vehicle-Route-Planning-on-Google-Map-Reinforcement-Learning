@@ -18,6 +18,7 @@ Download all the python file as following: **```main.py```**, **```Environment.p
 (2) enter your destination position: name of position or geocode (lat, lng)<br />
 (3) enter the length of each step, higher but less accurate (ex: 1000m takes less time to train compare to 100m)<br />
 (4) enter how many episode you want to train<br />
+Make sure that you can access to the internet and google map during the training process. Notice that your server will be blocked if your access to google map API exceed the limit in 24 hour and your program will be stucked. In the **```main.py```** we have implemented a mechanism to make your program sleep for a while when you over query the data. If you can get the full access to the Google map API, then you can remove the ```sleep``` command and make the learning process faster.
 
 ## How can you be creative <br />
 (1) You can model a real battery system which can include the battery degradation, SOC and other factor to make the whole system more like a real vehicle. The model can be implement in the python file: 
@@ -65,4 +66,4 @@ The fundamental concept of defining the reward is based on the energy consumptio
 ![result](https://user-images.githubusercontent.com/25232370/33046240-25c5ac2e-ce1e-11e7-9156-faf109c42bbe.JPG)<br />
 
 ## Credit
-I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorith with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
+I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
