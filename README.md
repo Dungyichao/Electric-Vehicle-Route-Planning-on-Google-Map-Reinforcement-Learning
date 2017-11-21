@@ -1,5 +1,5 @@
 # Electrical Vehicle Route Planning on Google Map with Reinforcement Learning
-More datail please find the **```Paper.pdf```** experiment section. This work is aim to take battery, motor, traffic time, and other factor into account for generating better route for the vehicle under certain condition.
+More datail please find the **```Paper.pdf```** experiment section. This work is aim to take battery, motor, traffic time, and other factor into account for generating better route (minimize the energy consumption) for the vehicle under certain condition.
 
 ## Library Requirements with Python 3.6.2:
 (1) Tensorflow (CPU)
