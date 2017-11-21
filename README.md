@@ -11,7 +11,7 @@ More datail please find the Reinforcement Learning on Route Planning through Goo
 (7) math
 (8) requests
 (9) urllib
-<img src="Electric-Vehicle-Route-Planning-on-Google-Map-Reinforcement-Learning/image/car1.JPG" height="100px" width="400px" >
+<img src="/image/car1.JPG">
 
 ## How can you get start
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
