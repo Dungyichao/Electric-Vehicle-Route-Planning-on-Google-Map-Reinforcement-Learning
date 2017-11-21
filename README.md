@@ -61,7 +61,7 @@ The fundamental concept of defining the reward is based on the energy consumptio
 **Grean:** Reachable position to reachable position where is not within the range of one stride of the destination<br />  
 **White:** Reachable position to the position where is in the one stride length of range from the destination<br />   
 
-![reward](https://user-images.githubusercontent.com/25232370/33048325-45acaca4-ce28-11e7-902b-9b74d8192a59.png)<br />
+<p align="center"><img src="/image/Reward.png" height="60%" width="60%"></p><br />
 
 
 ## Result
