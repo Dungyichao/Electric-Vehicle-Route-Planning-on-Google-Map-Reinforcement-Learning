@@ -34,7 +34,7 @@ Make sure that you can access to the internet and google map during the training
 
 ## How does this work
 ### (1) Algorithm: Double-DQN<br />
-Our learning agent is an electric vehicle and navigating on the Google map environment by choosing different action (north, east, south, west). The action can be determined by the Double-DQN or by random. During the learning process, the agent will first navigate on the map randomly to explore the map, but we will gradually reduce the portion of choosing action randomly but adopt the action with highest q value provided by the Double-DQN model. γ is 0.9 and N_b is 32.
+Our learning agent is an electric vehicle and navigating on the Google map environment by choosing different action (north, east, south, west). The action can be determined by the Double-DQN or by random. During the learning process, the agent will first navigate on the map randomly to explore the map, but we will gradually reduce the portion of choosing action randomly but adopt the action with highest q value provided by the Double-DQN model. γ is 0.9 and N<sup>b</sup> is 32.
 <p align="center">
   <img src="/image/al.JPG" height="40%" width="40%">
 </p>
