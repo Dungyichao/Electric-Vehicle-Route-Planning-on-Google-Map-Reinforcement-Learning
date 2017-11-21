@@ -28,7 +28,7 @@ Make sure that you can access to the internet and google map during the training
 **```motor.py```**. In the original python file, we only model the motor with idel manner. You can find out the real factor between input energy and output energy in the motor and apply in the code.<br />
 (3) You can have a more complicated neural network architecture to deal with larger map boundary and implement in the file:
 **```DoubleDQN.py```**. The function of this python file is to get input from the environment (such as state) and output an action (it can be Q values)<br />
-(4) You can implement other learning algorithm other than Double-DQN in the file: **```main.py```**. This file will creat two .csv files , one record the training environment parameter names ```train_para``` and the other one names ```result``` will record the training data such as reward, duration, failed steps, step history and so on. The learning model and checkpoint is also saved in a folder names ```model```.<br />
+(4) You can implement other learning algorithm other than Double-DQN in the file: **```main.py```**. This file will creat two .csv files , one record the training environment parameter names ```train_para.csv``` and the other one names ```result.csv``` will record the training data such as reward, duration, failed steps, step history and so on. The learning model and checkpoint is also saved in a folder names ```model```.<br />
 (5) You can add more action choices in the function of ```step``` of file: **```Environment.py```** such as heading southwest or northeast. In the origine python file, we only implement 4 action: north, east, south and west. It is also possible to change the way you calculate the energy consumption and add the concept of regenerative brake.
 
 
@@ -40,7 +40,7 @@ Make sure that you can access to the internet and google map during the training
 By Google Deepmind (link:https://deepmind.com/research/publications/deep-reinforcement-learning-double-q-learning/)<br />
 
 ### (2) Learning Environment<br />
-Make the map like a grid map for the learning agent to navigate on (figure(a)). Strictly speaking, each grid in the grid map is not a rectangle. This phenomenon is caused by the sphere geometry and our restriction on the length of the stride which is demonstrated in figure (b)<br />
+We make the map like a grid map for the learning agent to navigate on which is shown in figure(a). Strictly speaking, each grid in the grid map is not a rectangle. This phenomenon is caused by the sphere geometry and our restriction on the length of the stride which is demonstrated in figure (b)<br />
 <p align="center"><img src="/image/GridMap.JPG" height="60%" width="60%"></p>
 
 ### (3) Interact with Google map API <br />
@@ -50,9 +50,9 @@ assume that the agent is at current position denoted by A and heading south to t
 
 ### (4) Energy Computation<br /><br />
 The following graph shows how to compute the energy for a vehicle to travel uphill (can also be applied on a flat road)<br />
-<p align="center"><img src="/image/car2.JPG" height="60%" width="60%"></p><br />
+<p align="center"><img src="/image/car2.JPG" height="50%" width="50%"></p><br />
 But noticed that we only compute the elevation between the two position shown in the following graph. To increase the accuracy, you should minimize the distance between these two position (this will increase the computation time).<br />
-<p align="center"><img src="/image/car1.JPG" height="60%" width="60%"></p><br />
+<p align="center"><img src="/image/car1.JPG" height="50%" width="50%"></p><br />
 
 ### (5) Battery<br />
 In the experiment, the battery performance will not affect the training process. The battery is able to carry totally 50000Wh of energy which is a standard offering by electrical vehicle manufacture, Tesla. In electrochemistry, it is recommended to use the the state of charge (SOC) from 90% ~ 20% of a battery to improve it's life which we implement in our case. The SOC is calculated by the ratio between the current energy and the total energy. We will not take the battery degradation into the experiment. Further work can take the real factor on battery performance into account as part of the training process. For this experiment, we only demonstrate how much energy consumed and how many times the battery need to be charged in an ideal condition. <br />
@@ -65,7 +65,7 @@ The fundamental concept of defining the reward is based on the energy consumptio
 **Grean:** Reachable position to reachable position where is not within the range of one stride of the destination<br />  
 **White:** Reachable position to the position where is in the one stride length of range from the destination<br />   
 
-<p align="center"><img src="/image/Reward.png" height="50%" width="50%"></p><br />
+<p align="center"><img src="/image/Reward.png" height="45%" width="45%"></p><br />
 
 
 ## Result
