@@ -46,7 +46,7 @@ assume that the agent is at current position denoted by A and heading south to t
 
 ### (4) Energy Computation<br /><br />
 The following graph shows how to compute the energy for a vehicle to travel uphill (can also be applied on a flat road)<br />
-![car2](https://user-images.githubusercontent.com/25232370/33047104-0e497efa-ce22-11e7-99f9-2452ec593348.JPG)<br />
+<img src="/image/car2.JPG" height="60%" width="60%"><br /><br />
 But noticed that we only compute the elevation between the two position shown in the following graph. To increase the accuracy, you should minimize the distance between these two position (this will increase the computation time).<br />
 <img src="/image/car1.JPG" height="60%" width="60%"><br />
 
