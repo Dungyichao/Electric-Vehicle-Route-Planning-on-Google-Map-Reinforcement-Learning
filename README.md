@@ -13,7 +13,7 @@ More datail please find the **```Paper.pdf```** experiment section. This work is
 (9) urllib
 
 
-## How can you get start
+## How can you get started
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
 * enter your start position: name of position or geocode (lat, lng)<br />
 * enter your destination position: name of position or geocode (lat, lng)<br />
