@@ -20,7 +20,7 @@ More datail please find the Reinforcement Learning on Route Planning through Goo
 
 # How can you be creative <br />
 (1) You can model a real battery system which can include the battery degradation, SOC and other factor to make the whole system more like a real vehicle. The model can be implement in the python file: 
-```**battery.py**```. In the original python file, we only model the battery in linear manner.<br />
+**```battery.py```**. In the original python file, we only model the battery in linear manner.<br />
 (2) You can model a real motor system which can include the motor fatigue, heat condition and other factor to simulate the real motor. Your model can be implement in the python file:
 **motor.py**. In the original python file, we only model the motor with idel manner. You can find out the real factor between input energy and output energy in the motor and apply in the code.<br />
 (3) You can have a more complicated neural network architecture to deal with larger map boundary and implement in the file:
