@@ -35,7 +35,7 @@ Make sure that you can access to the internet and google map during the training
 ## How does this work
 ### (1) Algorithm: Double-DQN<br />
 <p align="center">
-  <img src="/image/al.JPG" height="60%" width="60%">
+  <img src="/image/al.JPG" height="40%" width="40%">
 </p>
 By Google Deepmind (link:https://deepmind.com/research/publications/deep-reinforcement-learning-double-q-learning/)<br />
 
