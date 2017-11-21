@@ -22,10 +22,10 @@ Download all the python file as following: **```main.py```**, **```Environment.p
 Make sure that you can access to the internet and google map during the training process. Notice that your server will be blocked if your access to google map API exceed the limit in 24 hour and your program will be stucked. In the **```main.py```** we have implemented a mechanism to make your program sleep for a while when you over query the data. If you can get the full access to the Google map API, then you can remove the ```sleep``` command and make the learning process faster.
 
 ## How can you be creative <br />
-(1) You can model a real battery system which can include the battery degradation, SOC and other factor to make the whole system more like a real vehicle. The model can be implement in the python file: 
+* You can model a real battery system which can include the battery degradation, SOC and other factor to make the whole system more like a real vehicle. The model can be implement in the python file: 
 **```battery.py```**. In the original python file, we only model the battery in linear manner.<br />
-(2) You can model a real motor system which can include the motor fatigue, heat condition and other factor to simulate the real motor. Your model can be implement in the python file:
-**```motor.py```**. In the original python file, we only model the motor with idel manner. You can find out the real factor between input energy and output energy in the motor and apply in the code.<br />
+* You can model a real motor system which can include the motor fatigue, heat condition and other factor to simulate the real motor. Your model can be implement in the python file:
+**```motor.py```**. In the original python file, we only model the motor with idel manner. You can find out the real factor between input energy and output energy in the motor and apply it in the code.<br />
 (3) You can have a more complicated neural network architecture to deal with larger map boundary and implement in the file:
 **```DoubleDQN.py```**. The function of this python file is to get input from the environment (such as state) and output an action (it can be Q values)<br />
 (4) You can implement other learning algorithm other than Double-DQN in the file: **```main.py```**. This file will creat two .csv files , one record the training environment parameter names ```train_para.csv``` and the other one names ```result.csv``` will record the training data such as reward, duration, failed steps, step history and so on. The learning model and checkpoint is also saved in a folder names ```model```.<br />
@@ -34,6 +34,7 @@ Make sure that you can access to the internet and google map during the training
 
 ## How does this work
 ### (1) Algorithm: Double-DQN<br />
+Our learning agent is an electric vehicle and navigating on the Google map environment by choosing different action (north, east, south, west). The action can be determined by the Double-DQN or by random. During the learning process, the agent will first navigate on the map randomly to explore the map, but we will gradually reduce the portion of choosing action randomly but adopt the action with highest q value provided by the Double-DQN model. $\gamma$ is 0.9 and $N_{b}$ is 32.
 <p align="center">
   <img src="/image/al.JPG" height="40%" width="40%">
 </p>
