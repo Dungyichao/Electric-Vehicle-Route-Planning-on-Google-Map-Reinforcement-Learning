@@ -11,7 +11,7 @@ More datail please find the Reinforcement Learning on Route Planning through Goo
 (7) math
 (8) requests
 (9) urllib
-<img src="/img/car1.jpg" height="100px" width="400px" >
+<img src="/img/car1.JPG" height="100px" width="400px" >
 
 ## How can you get start
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
