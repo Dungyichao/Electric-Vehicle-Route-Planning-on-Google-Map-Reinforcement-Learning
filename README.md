@@ -35,9 +35,9 @@ Make sure that you can access to the internet and google map during the training
 ## How does this work
 ### (1) Algorithm: Double-DQN<br />
 <p align="center">
-  <img src="/image/al.JPG" height="60%" width="60%"><br />
+  <img src="/image/al.JPG" height="60%" width="60%">
 </p>
-By Google Deepmind (link:https://deepmind.com/research/publications/deep-reinforcement-learning-double-q-learning/)<br />
+<p>By Google Deepmind (link:https://deepmind.com/research/publications/deep-reinforcement-learning-double-q-learning/)<br /></p>
 ### (2) Learning Environment<br />
 Make the map like a grid map for the learning agent to navigate on (figure(a)). Strictly speaking, each grid in the grid map is not a rectangle. This phenomenon is caused by the sphere geometry and our restriction on the length of the stride which is demonstrated in figure (b)<br />
 <p align="center"><img src="/image/GridMap.JPG" height="60%" width="60%"></p><br />
