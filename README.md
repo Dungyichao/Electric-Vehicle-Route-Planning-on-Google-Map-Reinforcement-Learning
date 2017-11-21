@@ -26,15 +26,15 @@ Make sure that you can access to the internet and google map during the training
 **```battery.py```**. In the original python file, we only model the battery in linear manner.<br />
 * You can model a real motor system which can include the motor fatigue, heat condition and other factor to simulate the real motor. Your model can be implement in the python file:
 **```motor.py```**. In the original python file, we only model the motor with idel manner. You can find out the real factor between input energy and output energy in the motor and apply it in the code.<br />
-(3) You can have a more complicated neural network architecture to deal with larger map boundary and implement in the file:
+* You can have a more complicated neural network architecture to deal with larger map boundary and implement in the file:
 **```DoubleDQN.py```**. The function of this python file is to get input from the environment (such as state) and output an action (it can be Q values)<br />
-(4) You can implement other learning algorithm other than Double-DQN in the file: **```main.py```**. This file will creat two .csv files , one record the training environment parameter names ```train_para.csv``` and the other one names ```result.csv``` will record the training data such as reward, duration, failed steps, step history and so on. The learning model and checkpoint is also saved in a folder names ```model```.<br />
-(5) You can add more action choices in the function of ```step``` of file: **```Environment.py```** such as heading southwest or northeast. In the origine python file, we only implement 4 action: north, east, south and west. It is also possible to change the way you calculate the energy consumption and add the concept of regenerative brake.
+* You can implement other learning algorithm other than Double-DQN in the file: **```main.py```**. This file will creat two .csv files , one record the training environment parameter names ```train_para.csv``` and the other one names ```result.csv``` will record the training data such as reward, duration, failed steps, step history and so on. The learning model and checkpoint is also saved in a folder names ```model```.<br />
+* You can add more action choices in the function of ```step``` of file: **```Environment.py```** such as heading southwest or northeast. In the origine python file, we only implement 4 action: north, east, south and west. It is also possible to change the way you calculate the energy consumption and add the concept of regenerative brake.
 
 
 ## How does this work
 ### (1) Algorithm: Double-DQN<br />
-Our learning agent is an electric vehicle and navigating on the Google map environment by choosing different action (north, east, south, west). The action can be determined by the Double-DQN or by random. During the learning process, the agent will first navigate on the map randomly to explore the map, but we will gradually reduce the portion of choosing action randomly but adopt the action with highest q value provided by the Double-DQN model. $\gamma$ is 0.9 and $N_{b}$ is 32.
+Our learning agent is an electric vehicle and navigating on the Google map environment by choosing different action (north, east, south, west). The action can be determined by the Double-DQN or by random. During the learning process, the agent will first navigate on the map randomly to explore the map, but we will gradually reduce the portion of choosing action randomly but adopt the action with highest q value provided by the Double-DQN model. \gammma is 0.9 and N_b is 32.
 <p align="center">
   <img src="/image/al.JPG" height="40%" width="40%">
 </p>
