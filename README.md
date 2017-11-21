@@ -11,7 +11,7 @@ More datail please find the Reinforcement Learning on Route Planning through Goo
 (7) math
 (8) requests
 (9) urllib
-<img src="/image/car1.JPG" height="50%" width="40%">
+
 
 ## How can you get start
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
@@ -48,7 +48,7 @@ assume that the agent is at current position denoted by A and heading south to t
 The following graph shows how to compute the energy for a vehicle to travel uphill (can also be applied on a flat road)<br />
 ![car2](https://user-images.githubusercontent.com/25232370/33047104-0e497efa-ce22-11e7-99f9-2452ec593348.JPG)<br />
 But noticed that we only compute the elevation between the two position shown in the following graph. To increase the accuracy, you should minimize the distance between these two position (this will increase the computation time).<br />
-![car1](https://user-images.githubusercontent.com/25232370/33046721-338fe5b6-ce20-11e7-8c17-3663462ac24f.JPG)<br />
+<img src="/image/car1.JPG" height="60%" width="60%"><br />
 
 ### (5) Battery<br />
 In the experiment, the battery performance will not affect the training process. The battery is able to carry totally 50000Wh of energy which is a standard offering by electrical vehicle manufacture, Tesla. In electrochemistry, it is recommended to use the the state of charge (SOC) from 90% ~ 20% of a battery to improve it's life which we implement in our case. The SOC is calculated by the ratio between the current energy and the total energy. We will not take the battery degradation into the experiment. Further work can take the real factor on battery performance into account as part of the training process. For this experiment, we only demonstrate how much energy consumed and how many times the battery need to be charged in an ideal condition. <br />
