@@ -15,10 +15,10 @@ More datail please find the **```Paper.pdf```** experiment section. This work is
 
 ## How can you get start
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
-(1) enter your start position: name of position or geocode (lat, lng)<br />
-(2) enter your destination position: name of position or geocode (lat, lng)<br />
-(3) enter the length of each step, higher but less accurate (ex: 1000m takes less time to train compare to 100m)<br />
-(4) enter how many episode you want to train<br />
+* enter your start position: name of position or geocode (lat, lng)<br />
+* enter your destination position: name of position or geocode (lat, lng)<br />
+* enter the length of each step, higher but less accurate (ex: 1000m takes less time to train compare to 100m)<br />
+* enter how many episode you want to train<br />
 Make sure that you can access to the internet and google map during the training process. Notice that your server will be blocked if your access to google map API exceed the limit in 24 hour and your program will be stucked. In the **```main.py```** we have implemented a mechanism to make your program sleep for a while when you over query the data. If you can get the full access to the Google map API, then you can remove the ```sleep``` command and make the learning process faster.
 
 ## How can you be creative <br />
