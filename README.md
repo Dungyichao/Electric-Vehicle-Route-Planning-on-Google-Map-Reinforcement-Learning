@@ -13,6 +13,7 @@ More datail please find the Reinforcement Learning on Route Planning through Goo
 (9) urllib
 
 ## How can you get start
+Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
 (1) enter your start position: name of position or geocode (lat, lng)<br />
 (2) enter your destination position: name of position or geocode (lat, lng)<br />
 (3) enter the length of each step, higher but less accurate (ex: 1000m takes less time to train compare to 100m)<br />
@@ -61,4 +62,7 @@ The fundamental concept of defining the reward is based on the energy consumptio
 
 
 ## Result
-![result](https://user-images.githubusercontent.com/25232370/33046240-25c5ac2e-ce1e-11e7-9156-faf109c42bbe.JPG)
+![result](https://user-images.githubusercontent.com/25232370/33046240-25c5ac2e-ce1e-11e7-9156-faf109c42bbe.JPG)<br />
+
+## Credit
+I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorith with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
