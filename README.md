@@ -18,6 +18,10 @@ More datail please find the Reinforcement Learning on Route Planning through Goo
 (3) enter the length of each step, higher but less accurate (ex: 1000m takes less time to train compare to 100m)<br />
 (4) enter how many episode you want to train<br />
 
+# How can you be creative <br />
+(1) You can model a real battery system which can include the battery degradation, SOC and other factor to make the whole system more like a real vehicle. The model can be implement in the python file: 
+**battery.py**. In the original python file, we only model the battery in linear manner.
+
 # How does this work
 ## (1) Algorithm: Double-DQN<br />
 ![al](https://user-images.githubusercontent.com/25232370/33048251-e862be8a-ce27-11e7-9dc7-99932f6de352.JPG)<br />
