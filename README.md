@@ -25,7 +25,7 @@ More datail please find the Reinforcement Learning on Route Planning through Goo
 **```motor.py```**. In the original python file, we only model the motor with idel manner. You can find out the real factor between input energy and output energy in the motor and apply in the code.<br />
 (3) You can have a more complicated neural network architecture to deal with larger map boundary and implement in the file:
 **```DoubleDQN.py```**. The function of this python file is to get input from the environment (such as state) and output an action (it can be Q values)<br />
-(4) You can implement other learning algorithm other than Double-DQN in the file: **```main.py```**.<br />
+(4) You can implement other learning algorithm other than Double-DQN in the file: **```main.py```**. This file will creat two .csv files , one record the training environment parameter names ```train_para``` and the other one will record the training data such as reward, duration, failed steps, step history and so on. The learning model and checkpoint is also saved in a folder names ```model```.<br />
 
 
 ## How does this work
