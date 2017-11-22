@@ -34,9 +34,13 @@ Download all the python file as following: **```main.py```**, **```Environment.p
 
 ## How does this work
 ### (1) Algorithm: Double-DQN<br />
+The basic idea of the reinforcement learning is to make the agent learn from the action it takes and the feedback it gets. When the agent encounter a current state, it then decide what to do next and give an action. By executing this action, the agent will enter the next state. This routine will continue untill the agent reach the destination or terminate by the limit of the number of actions it should take. 
+
 We initialize two identical network, the first one is the Q-network which the agent determines the action at the current state. The second one is the Target-network which acts as a target for Q-network to achieve. We only do backpropagation and update the weights through AdamOptimizer with learning rate 0.0001 in the Q-network for every steps and then copy the weights in Q-network to Target-network for every N steps (5 steps is implemented in the original python file).
 
 Our learning agent is an electric vehicle and navigating on the Google map environment by choosing different action (north, east, south, west). The action can be determined by the Double-DQN or by random. During the learning process, the agent will first navigate on the map randomly to explore the map, but we will gradually reduce the portion of choosing action randomly but adopt the action with highest q value provided by the Double-DQN model. We save current state, action, current reward, next state, reach end or not in a tuple and store every tuple in a replay buffer which acts like a brain that we store all the memory in. When we need to update the Q-network weights, we will pick N<sub>b</sub> number of tuples randomly and uniformly from the replay buffer. Here comes the action of Target-network, it will take the next state of a tuple as an input and output a vector of q value corresponds to each action choice. We only pick up the value among this vector of q value which corresponds to the action that gives us the highest value when inputing the next state into the Q-network, and then we compute the target y by adding this value with factor γ to the current reward. We implement γ as 0.9 and N<sub>b</sub> as 32 in orginal case.
+
+Given a tuple from the replay buffer, the loss is computed by subtracting the q value which is calculated by inputing the current state into the Q-network and pick the value corresponding to the action from y. We then add up all the loss (we have 32 losses in our case) and use it to update the Q-network's weights.  
 <p align="center">
   <img src="/image/al.JPG" height="40%" width="40%">
 </p>
