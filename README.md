@@ -47,7 +47,7 @@ Given a tuple from the replay buffer, the loss is computed by subtracting the q 
 By Google Deepmind (link:https://deepmind.com/research/publications/deep-reinforcement-learning-double-q-learning/)<br />
 
 ### (2) Learning Environment<br />
-We make the map like a grid map for the learning agent to navigate on which is shown in figure(a). Strictly speaking, each grid in the grid map is not a rectangle. This phenomenon is caused by the sphere geometry and our restriction on the length of the stride which is demonstrated in figure (b)<br />
+We make the map like a grid map for the learning agent to navigate on which is shown in figure(a). Strictly speaking, each grid in the grid map is not a rectangle. This phenomenon is caused by the sphere geometry and our restriction on the length of the stride which is demonstrated in figure (b). The reason for restricting the length of stride to certain meter is to bound the inaccuracy within the given length.<br />
 <p align="center"><img src="/image/GridMap.JPG" height="60%" width="60%"></p>
 
 ### (3) Interact with Google map API <br />
