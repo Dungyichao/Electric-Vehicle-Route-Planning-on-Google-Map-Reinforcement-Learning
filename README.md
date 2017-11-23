@@ -76,7 +76,11 @@ The fundamental concept of defining the reward is based on the energy consumptio
 
 
 ## Result
+The agent is being trained from the start position (geocode:40.4682572, -86.9803475) and the destination (geocode:40.445283, -86.948429) with stride length 750m. Steps more than 64 steps within an episode will be regarded as failed. Noticed that during the training, Google map api often blocked our server and we are forced to end the training process and resume the model from the interrupted episode (red line). This problem will lead to the empty replay buffer where we choose sample uniformly at random to compute the loss and updtate the weights during learning. As a result, we will need to resume the model and start choosing action randomly to refill the replay buffer and gradually decrease the portion of random action. <br />
+
+The blue line in figure 9 shows the energy consumed by the agent. The agent is able to find out a way to minimize the energy consumption after 600 episodes. The oscillation in the first 600 episodes is caused by highly random action (green line) and inaccurate Q value provided by the Q-network. While the loss of inaccurate Q value is minimized, the oscillation is mitigated and the energy consumption become less and stable. The minimum energy that the agent can achieve with random action is 1327(J) and the corresponding time is 659 seconds where the energy and time of the route provided by Google map are 1489(J) and 315 seconds.<br />
 <p align="center"><img src="/image/result750.PNG" height="90%" width="90%"></p><br />
+<p align="center"><img src="/image/result1000.JPG" height="90%" width="90%"></p><br />
 
 ## Credit
 I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
