@@ -56,6 +56,8 @@ assume that the agent is at current position denoted by A and heading south to t
 
 
 ### (4) Energy Computation<br /><br />
+We compute the energy by the following flow chart which the symbol is corresponding to the previous figure.<br />
+<p align="center"><img src="/image/interact.JPG" height="50%" width="50%"></p><br />
 The following graph shows how to compute the energy for a vehicle to travel uphill (can also be applied on a flat road)<br />
 <p align="center"><img src="/image/car2.JPG" height="50%" width="50%"></p><br />
 But noticed that we only compute the elevation between the two position shown in the following graph. To increase the accuracy, you should minimize the distance between these two position (this will increase the computation time).<br />
