@@ -80,6 +80,8 @@ The agent is being trained from the start position (geocode:40.4682572, -86.9803
 
 The blue line in figure 9 shows the energy consumed by the agent. The agent is able to find out a way to minimize the energy consumption after 600 episodes. The oscillation in the first 600 episodes is caused by highly random action (green line) and inaccurate Q value provided by the Q-network. While the loss of inaccurate Q value is minimized, the oscillation is mitigated and the energy consumption become less and stable. The minimum energy that the agent can achieve with random action is 1327(J) and the corresponding time is 659 seconds where the energy and time of the route provided by Google map are 1489(J) and 315 seconds.<br />
 <p align="center"><img src="/image/result750.JPG" height="90%" width="90%"></p><br />
+
+The lower figure is the result of energy consumption with stride length of 1000m. Steps more than 36 steps within an episode will be regarded as failed. The minimum energy that the agent can achieve with random action is 1951(J) and the corresponding time is 946 seconds. We didn't make this experiment end at the same point as the previous one because we just want to demonstrate the trend that with lower stride length we can achieve better result but more computation time.<br />
 <p align="center"><img src="/image/result1000.JPG" height="90%" width="90%"></p><br />
 
 ## Credit
