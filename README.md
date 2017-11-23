@@ -76,7 +76,7 @@ The fundamental concept of defining the reward is based on the energy consumptio
 
 
 ## Result
-![result](https://user-images.githubusercontent.com/25232370/33046240-25c5ac2e-ce1e-11e7-9156-faf109c42bbe.JPG)<br />
+<p align="center"><img src="/image/result750.PNG" height="90%" width="90%"></p><br />
 
 ## Credit
 I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
