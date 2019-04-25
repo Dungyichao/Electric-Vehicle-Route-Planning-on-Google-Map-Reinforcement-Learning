@@ -105,7 +105,7 @@ The lower figure is the result of energy consumption with stride length of 1000m
 <p align="center"><img src="/image/result1000.JPG" height="110%" width="110%"></p><br />
 
 ## To the Reader
-This work is only an experiment of my concept. The parameters and model are not optimized. If you can take larger map into training (Of course you will be charged a lot by Google), and improve the models, I'm sure you can get a better result. <br />
+This work is only an experiment of my concept and was a course project of ECE570. The parameters and model are not optimized. If you can take larger map into training (Of course you will be charged a lot by Google), and improve the models, I'm sure you can get a better result. <br />
 
 ## Credit
 I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
