@@ -34,13 +34,17 @@ Notice that my research and result was conducted in 2017 in Purdue ME linux serv
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
 * enter your start position in **```main.py```**: name of position or geocode (lat, lng)<br />
 * enter your destination position in **```main.py```**: name of position or geocode (lat, lng)<br />
+
+<p align="center"><img src="/image/setposition.JPG" height="60%" width="60%"></p><br />
+
 * enter the length of each step in **```main.py```**, higher but less accurate (ex: 1000m takes less time to train compare to 100m)<br />
 * enter how many episode you want to train in **```main.py```**<br />
 * There are many file and folder path name need to be changed in **```main.py```** to fit your condition.<br />
 * Make sure that you can access to the internet and google map during the training process. Notice that your server will be blocked if your access to google map API exceed the limit in 24 hour and your program will be stucked. In the **```main.py```** we have implemented a mechanism to make your program sleep for a while when you over query the data. If you can get the full access to the Google map API, then you can remove the ```sleep``` command and make the learning process faster.<br />
 * If you never train any model yet, then you need to make **```load_model == False```**  in the line 141 of **```main.py```** . <br />
 * Run file **```main.py```** <br />
-<p align="center"><img src="/image/setposition.JPG" height="60%" width="60%"></p><br />
+
+
 ## How can you be creative <br />
 * You can model a real battery system which can include the battery degradation, SOC and other factor to make the whole system more like a real vehicle. The model can be implement in the python file: 
 **```battery.py```**. In the original python file, we only model the battery in linear manner.<br />
