@@ -16,10 +16,10 @@ The other related personal project can be found at this link: https://angel.co/d
 (9) urllib
 
 ## Set Up Google Map API
-Google Map API is now requiring every search URL contains user's key. Please refer to this link: https://cloud.google.com/maps-platform/ .Enter your billing information, it will not charge you at this moment because you got $200 search credit. If you exceed the certain amount of search, then you will be charged. <br />
+Google Map API is now requiring every search URL contains user's key. Please refer to this link: https://cloud.google.com/maps-platform/ .Enter your billing information, it will not charge you at this moment because you got $200 search credit. If you exceed the certain amount of search, then you will be charged.You only need the Maps option. <br />
 
 <p align="center"><img src="/image/instruction.JPG" height="60%" width="60%"></p>
-You only need the Map option. <br />
+
 
 You will get a key for example **```AZuesYuds12_dsakd23456sdeHf```**.Then the searching URL of (latitude, Longitude) = (40.468254,-86.980963) will become: https://maps.googleapis.com/maps/api/geocode/json?address=40.468254%2C-86.980963&key=AZuesYuds12_dsakd23456sdeHf  <br />
 
