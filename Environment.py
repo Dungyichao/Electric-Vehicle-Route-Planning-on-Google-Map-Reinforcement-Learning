@@ -25,7 +25,7 @@ class environment():
     def geocoding_api(self, address):  # 2 output: status, position
         # address: key word of place
         geocode_api = 'https://maps.googleapis.com/maps/api/geocode/json?'
-        geocode_url = geocode_api + urllib.parse.urlencode({'address': address})
+        geocode_url = geocode_api + urllib.parse.urlencode({'address': address}) + "$key=AZuesYuds12_dsakd23456sdeHf"
         #geocode_json = requests.get(geocode_url, timeout=10).json()
         s = requests.Session()
         geocode_json = s.get(geocode_url).json()
@@ -55,7 +55,7 @@ class environment():
     def elevation_api(self, location):  # 2 output: elevation, resolution
         # location = '51.4700223,-0.4542955'
         elevation_api = 'https://maps.googleapis.com/maps/api/elevation/json?'
-        elevation_url = elevation_api + urllib.parse.urlencode({'locations': location})
+        elevation_url = elevation_api + urllib.parse.urlencode({'locations': location}) + "$key=AZuesYuds12_dsakd23456sdeHf"
         #elevation_json = requests.get(elevation_url, timeout=10).json()
         s = requests.Session()
         elevation_json = s.get(elevation_url).json()
@@ -71,7 +71,7 @@ class environment():
     def directions_api(self, origin, destination):  # 5 output: status, steps, bound
         directions_api = 'https://maps.googleapis.com/maps/api/directions/json?'
         directions_url = directions_api + urllib.parse.urlencode({'origin': origin}) + '&' + urllib.parse.urlencode(
-            {'destination': destination}) + '&' + urllib.parse.urlencode({'units': 'metric'})
+            {'destination': destination}) + '&' + urllib.parse.urlencode({'units': 'metric'}) + "$key=AZuesYuds12_dsakd23456sdeHf"
         #directions_json = requests.get(directions_url, timeout=10).json()
         s = requests.Session()
         directions_json = s.get(directions_url).json()
