@@ -138,7 +138,7 @@ if load_model == True:
 ############### initialize constant
 tt = 0
 ############### load the replay buffer
-if load_model == True:
+if load_model == False:
     with open("./ev/buffercurrents1.txt", "r") as f:
         buffercurrents1 = f.readlines()
         buffercurrents1 = [x.strip() for x in buffercurrents1]
