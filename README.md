@@ -16,7 +16,7 @@ The other related personal project can be found at this link: https://angel.co/d
 (9) urllib
 
 ## Set Up Google Map API
-Google Map API is now requiring every search URL contains user's key. Please refer to this link: https://cloud.google.com/maps-platform/ .Enter your billing information, it will not charge you at this moment because you got $200 free search credit. If you exceed the certain amount of search, then you will be charged. You only need the Maps option. <br />
+Google Map API is now requiring every search URL contains user's key. Please refer to this link: https://cloud.google.com/maps-platform/ . Enter your billing information, it will not charge you at this moment because you got $200 free search credit. If you exceed the certain amount of search, then you will be charged. You only need the Maps option. <br />
 
 <p align="center"><img src="/image/instruction.JPG" height="60%" width="60%"></p>
 
@@ -27,7 +27,7 @@ You will get a key for example **```AZuesYuds12_dsakd23456sdeHf```**.Then the se
 
 There are three places in the **```Environment.py```** where you need to add the key like the figure above. I've put these fake key in the code for you. What you need to do is replace these fake key with your own key.<br />
 
-Notice that my research and result was conducted in 2017. During that time, I'm free to do the search without paying any fee (Sometimes my search would stop because Google map server would block my ip because I've done too much query. Wait for 5~10 min or sometimes even longer such as 1~2 hours, and the server would unlock my ip)
+Notice that my research and result was conducted in 2017. During that time, I'm free to do the search without paying any fee (Sometimes my search would stop because Google map server would block my ip because I've done too much query. Wait for 5 to 10 min or sometimes even longer such as 1 to 2 hours, and the server would unlock my ip)
 
 
 ## How can you get started
