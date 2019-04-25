@@ -34,6 +34,7 @@ Notice that my research and result was conducted in 2017 in Purdue ME linux serv
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
 * enter your start position in **```main.py```**: name of position or geocode (lat, lng)<br />
 * enter your destination position in **```main.py```**: name of position or geocode (lat, lng)<br />
+<p align="center"><img src="/image/setposition.JPG" height="60%" width="60%"></p>
 * enter the length of each step in **```main.py```**, higher but less accurate (ex: 1000m takes less time to train compare to 100m)<br />
 * enter how many episode you want to train in **```main.py```**<br />
 * There are many file and folder path name need to be changed in **```main.py```** to fit your condition.<br />
