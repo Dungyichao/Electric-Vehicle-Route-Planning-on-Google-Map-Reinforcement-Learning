@@ -108,4 +108,4 @@ The lower figure is the result of energy consumption with stride length of 1000m
 I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
 
 I also encountered initializing two models (using the same structure) of tensorflow. The following link solve the problem (link: https://stackoverflow.com/questions/41577384/variable-scope-issue-in-tensorflow). The following figure is where I implemented this concept.<br />
-<p align="center"><img src="/image/ini2structure.JPG" height="60%" width="60%"></p><br />
+<p align="center"><img src="/image/ini2structure.JPG" height="30%" width="30%"></p><br />
