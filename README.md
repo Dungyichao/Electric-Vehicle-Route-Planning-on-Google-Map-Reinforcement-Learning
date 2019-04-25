@@ -13,14 +13,17 @@ The other related personal project can be found at this link: https://angel.co/d
 (6) random
 (7) math
 (8) requests
-(9) urllib 
+(9) urllib
+
+## Set Up Google Map API
+Google Map API is now requiring every search URL contains user's key. Please refer to this link: https://cloud.google.com/maps-platform/ .Enter your billing information, it will not charge you at this moment because you got $200 search credit. If you exceed the certain amount of search, then you will be charged. You will get a key for example **AZuesYuds12_dsakd23456sdeHf**.Then the searching URL of (latitude, Longitude) = (40.468254,-86.980963) will become: https://maps.googleapis.com/maps/api/geocode/json?address=40.468254%2C-86.980963&key=AZuesYuds12_dsakd23456sdeHf  <br />
+
+<p align="center"><img src="/image/googleURL.JPG" height="60%" width="60%"></p>
+
+There are three places in the **```Environment.py```** where you need to add the key like the figure above. I've put these fake key in the code for you. What you need to do is replace these fake key with your own key.
 
 
 ## How can you get started
-Google Map API is now requiring every search URL contains user's key. Please refer to this link: https://cloud.google.com/maps-platform/?&_ga=2.89467932.602544398.1556159504-1034383075.1548083759#get-started .Enter your billing information, it will not charge you at this moment because you got $200 search credit. If you exceed the certain amount of search, then you will be charged. You will get a key for example **AZuesYuds12_dsakd23456sdeHf**.Then the searching URL of (latitude, Longitude) = (40.468254,-86.980963) will become: https://maps.googleapis.com/maps/api/geocode/json?address=40.468254%2C-86.980963&key=AZuesYuds12_dsakd23456sdeHf  <br />
-<p align="center"><img src="/image/googleURL.JPG" height="60%" width="60%"></p>
-There are three places in the **```Environment.py```** where you need to add the key like the figure above.
-
 Download all the python file as following: **```main.py```**, **```Environment.py```**, **```DoubleDQN.py```**, **```battery.py```**, **```motor.py```** <br />
 * enter your start position: name of position or geocode (lat, lng)<br />
 * enter your destination position: name of position or geocode (lat, lng)<br />
