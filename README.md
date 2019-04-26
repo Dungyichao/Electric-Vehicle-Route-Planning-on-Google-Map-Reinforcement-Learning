@@ -117,6 +117,10 @@ The lower figure is the result of energy consumption with stride length of 1000m
 ## To the Reader
 This work is only an experiment of my concept and was a course project of ECE570 Artificial Intelligence in 2017 Fall. The parameters and model are not optimized. If you can take larger map into training (Of course you will be charged a lot by Google), and improve the models, I'm sure you can get a better result. <br />
 
+Currently, the input is merely the latitude and longitude. I think there is a serious problem of negative value of latitude and longitude which I didn't think of when I implemented the project. Reader can make an improvement on this. <br />
+
+Is it a good idea to use latitude and longitude as input? I doubt it, after I done this project.
+
 ## Credit
 I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
 
