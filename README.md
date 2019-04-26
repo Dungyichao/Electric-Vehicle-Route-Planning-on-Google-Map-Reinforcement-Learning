@@ -119,7 +119,7 @@ This work is only an experiment of my concept and was a course project of ECE570
 
 Currently, the input is merely the latitude and longitude. I think there is a serious problem of negative value of latitude and longitude which I didn't think of when I implemented the project. Reader can make an improvement on this. <br />
 
-Is it a good idea to use latitude and longitude as input? I doubt it, after I done this project.
+Is it a good idea to use latitude and longitude as input? I doubt it, after I done this project. What will happen if there are some new road being constructed? Are we going to train the model again? Maybe feeding the screenshot of the map as input will be a good idea and the idea will be similar as Value Iteration Network (link: https://arxiv.org/abs/1602.02867 ) which I reviewed it in the Paper survey section. <br />
 
 ## Credit
 I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
