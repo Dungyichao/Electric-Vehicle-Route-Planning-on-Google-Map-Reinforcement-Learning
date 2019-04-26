@@ -23,9 +23,13 @@ Google Map API is now requiring every search URL contains user's key. Please ref
 
 You will get a key for example **```AZuesYuds12_dsakd23456sdeHf```**.Then the searching URL of (latitude, Longitude) = (40.468254,-86.980963) will become: https://maps.googleapis.com/maps/api/geocode/json?address=40.468254%2C-86.980963&key=AZuesYuds12_dsakd23456sdeHf  <br />
 
-<p align="center"><img src="/image/googleURL.JPG" height="60%" width="60%"></p>
+The result of the URL (with your correct key) will be like the following figure.<br />
 
-There are three places in the **```Environment.py```** where you need to add the key like the figure above. I've put these fake key in the code for you. What you need to do is replace these fake key with your own key.<br />
+<p align="center"><img src="/image/googlemapresult.JPG" height="60%" width="60%"></p>
+
+There are three places in the **```Environment.py```** where you need to add the key like the figure below. I've put these fake key in the code for you. What you need to do is replace these fake key with your own key.<br />
+
+<p align="center"><img src="/image/googleURL.JPG" height="60%" width="60%"></p>
 
 You can learn how to interact with google map api (geocode/elevation/directions) correctly in **```Environment.py```**. <br />
 
