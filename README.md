@@ -1,6 +1,6 @@
 # Electrical Vehicle Route Planning on Google Map with Reinforcement Learning
 More datail please find the **```Paper.pdf```** experiment section. This work is aim to take battery, motor, traffic time, and other factor into account for generating better route (minimize the energy consumption) for the vehicle under certain condition.<br />
-The other related personal project can be found at this link: https://angel.co/dung-yi-chao. <br />
+The other related personal project can be found at this link: https://angel.co/dung-yi-chao. Please read carefully through this page before you start running the program. There are many parameters or condition need to be modified in order to fit your environment. <br />
 
 
 
