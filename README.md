@@ -25,7 +25,7 @@ You will get a key for example **```AZuesYuds12_dsakd23456sdeHf```**.Then the se
 
 The result of the URL (with your correct key) will be like the following figure.<br />
 
-<p align="center"><img src="/image/googlemapresult.JPG" height="60%" width="60%"></p>
+<p align="center"><img src="/image/googlemapresult.JPG" height="40%" width="40%"></p>
 
 There are three places in the **```Environment.py```** where you need to add the key like the figure below. I've put these fake key in the code for you. What you need to do is replace these fake key with your own key.<br />
 
