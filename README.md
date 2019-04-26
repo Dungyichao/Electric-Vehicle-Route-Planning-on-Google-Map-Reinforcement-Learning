@@ -119,6 +119,8 @@ This work is only an experiment of my concept and was a course project of ECE570
 
 Currently, the input is merely the latitude and longitude. I think there is a serious problem of negative value of latitude and longitude which I didn't think of when I implemented the project. Reader can make an improvement on this. <br />
 
+We did not validate our model in any unseen map, and here comes to the basic question, can this model be used in an unseen world? I don't know. 
+
 Is it a good idea to use latitude and longitude as input? I doubt it, after I done this project. What will happen if there are some new road being constructed? Are we going to train the model again? Maybe feeding the screenshot of the map as input will be a good idea and the idea will be similar as Value Iteration Network (link: https://arxiv.org/abs/1602.02867 ) which I reviewed it in the Paper survey section. <br />
 
 ## Credit
