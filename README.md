@@ -126,5 +126,5 @@ Is it a good idea to use latitude and longitude as input? I doubt it, after I do
 ## Credit
 I learn a lot from Arthur Juliani's tutorial website which implement reinforcement learning algorithm with tensorflow. I also reference part of his code and modified it. (link: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)<br />
 
-I also encountered initializing two networks (using the same model) of tensorflow. The following link solve the problem (link: https://stackoverflow.com/questions/41577384/variable-scope-issue-in-tensorflow). The following figure is where I implemented this concept.<br />
+I also encountered problem when initializing two networks (using the same model) of tensorflow. The following link solve the problem (link: https://stackoverflow.com/questions/41577384/variable-scope-issue-in-tensorflow). The following figure is where I implemented this concept.<br />
 <p align="center"><img src="/image/ini2structure.JPG" height="30%" width="30%"></p><br />
