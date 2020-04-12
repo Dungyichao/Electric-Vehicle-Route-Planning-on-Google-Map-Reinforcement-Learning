@@ -21,6 +21,8 @@ class environment():
         self.length = 1
         #self.s = requests.Session()
         self.envheightkm = 1
+        self.latt = 0
+        self.lngg = 0
 
     def geocoding_api(self, address):  # 2 output: status, position
         # address: key word of place
