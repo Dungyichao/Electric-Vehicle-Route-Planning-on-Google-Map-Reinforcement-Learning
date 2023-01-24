@@ -10,6 +10,8 @@ class environment():
     def __init__(self, origin_adr, destination_adr):
         self.origin = origin_adr
         self.destination = destination_adr
+        self.latt = 0
+        self.lngg = 0
         self.make_map()
         self.battery = lithium_ion_battery(50000) #Wh
         self.need_energy = need_energy()
@@ -21,8 +23,7 @@ class environment():
         self.length = 1
         #self.s = requests.Session()
         self.envheightkm = 1
-        self.latt = 0
-        self.lngg = 0
+        
 
     def geocoding_api(self, address):  # 2 output: status, position
         # address: key word of place
